@@ -1,29 +1,21 @@
 ---
-layout: page
-title: Links
-description: 没有链接的博客是孤独的
-keywords: 友情链接
-comments: true
-menu: 链接
-permalink: /links/
+layout: mypost
+title: 友情链接
 ---
 
-> God made relatives. Thank God we can choose our friends.
+欢迎各位朋友与我建立友链，如需友链请到[留言板](chat.html)留言，我看到留言后会添加上的，本站的友链信息如下
+
+```
+名称：{{ site.title }}
+描述：{{ site.description }}
+地址：{{ site.domainUrl }}{{ site.baseurl }}
+头像：{{ site.domainUrl }}{{ site.baseurl }}/static/img/logo.jpg
+```
 
 <ul>
-{% for link in site.data.links %}
-  {% if link.src == 'life' %}
-  <li><a href="{{ link.url }}" target="_blank">{{ link.name}}</a></li>
-  {% endif %}
-{% endfor %}
-</ul>
-
-> 友情链接
-
-<ul>
-{% for link in site.data.links %}
-  {% if link.src == 'www' %}
-  <li><a href="{{ link.url }}" target="_blank">{{ link.name}}</a></li>
-  {% endif %}
-{% endfor %}
+  {%- for link in site.links %}
+  <li>
+    <p><a href="{{ link.url }}" title="{{ link.desc }}" target="_blank" >{{ link.title }}</a></p>
+  </li>
+  {%- endfor %}
 </ul>

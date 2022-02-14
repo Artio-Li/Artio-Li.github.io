@@ -1,41 +1,32 @@
 ---
-layout: page
-title: About
-description: 打码改变世界
-keywords: Zhuang Ma, 马壮
-comments: true
-menu: 关于
-permalink: /about/
+layout: mypost
+title: 关于我
 ---
 
-我是马壮，码而生，码而立。
+> Hello 陌生人，欢迎访问 TMaize Blog
 
-仰慕「优雅编码的艺术」。
+该博客托管于 GitHub Page，国内默认解析到腾讯云，以保证国内外的访问速度。留言页面使用腾讯的“吐个槽”，另外使用的腾讯的 MTA 分析工具统计访问量（下线了）
 
-坚信熟能生巧，努力改变人生。
+主题是自己写的，见[tmaize-blog](https://github.com/TMaize/tmaize-blog)，喜欢的话可以给个小星星。另外欢迎添加友链，在[留言板](chat.html)留言即可
 
-## 联系
+## 相关技能
 
-<ul>
-{% for website in site.data.social %}
-<li>{{website.sitename }}：<a href="{{ website.url }}" target="_blank">@{{ website.name }}</a></li>
-{% endfor %}
-{% if site.url contains 'mazhuang.org' %}
-<li>
-微信公众号：<br />
-<img style="height:192px;width:192px;border:1px solid lightgrey;" src="{{ assets_base_url }}/assets/images/qrcode.jpg" alt="闷骚的程序员" />
-</li>
-{% endif %}
-</ul>
+- 熟悉 JavaScript 语言， 熟练使用 Vue 全家桶,jQuery 等前端框架
 
+- 熟悉 Java，NodeJs,Go 等后端语言
 
-## Skill Keywords
+- 后端框架 Spring，Hibernate，JFinal，Mybatis 略有了解
 
-{% for skill in site.data.skills %}
-### {{ skill.name }}
-<div class="btn-inline">
-{% for keyword in skill.keywords %}
-<button class="btn btn-outline" type="button">{{ keyword }}</button>
-{% endfor %}
-</div>
-{% endfor %}
+- 数据库方面能熟练使用 MySQL,Oracle，MongoDB
+
+- Linux 的简单使用，各种服务的搭建
+
+- 能够使用 Git/SVN 对代码版本进行控制
+
+## 联系我
+
+- QQ&nbsp;&nbsp;&nbsp;&nbsp;: 1772314831
+
+- Email&nbsp;: [tmaize@qq.com](http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=YBQNAQkaBSAREU4DDw0)
+
+- GitHub: [https://github.com/tmaize](https://github.com/tmaize)

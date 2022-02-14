@@ -1,172 +1,91 @@
-# ---------------- #
-#   Main Configs   #
-# ---------------- #
-baseurl:
-url: https://artio-li.github.io/
-date_format: "ordinal"
-title: Artio的Blogs
-subtitle: "主页的签名待补充"
-description: "出现在哪？"
-keywords: Artio, Java 代码审计, 漏洞分析, 网络安全
-timezone: Asia/Shanghai
-encoding: "utf-8"
-repository: Artio-Li/Artio-Li.github.io
-# 对 css 和 js 资源的 cdn 加速配置
-cdn:
-    jsdelivr:
-        enabled: true
-# 可选组件配置
-components:
-    # 分享
-    # weibo,qq,wechat,douban,qzone,linkedin,facebook,twitter
-    share:
-        enabled: false
-        hide-platforms: qq,facebook
-    # 不蒜子访问统计
-    busuanzi:
-        enabled: false
-        start_date: 2022-02-14
-    # My Popular Repositories
-    side_bar_repo:
-        enabled: true
-        limit: 5
-    # 文章字数统计
-    word_count:
-        enabled: true
-    # 页面右上角，以及「关于」页面的二维码
-    # 修改图片请替换 assets/images/qrcode.jpg
-    qrcode:
-        enabled: false
-        image_alt: 闷骚的程序员
-    # 维基索引页使用哪种视图，支持 列表（list）/分类（cate）
-    wiki:
-        view: cate
-# 压缩页面内容
-compress_html:
-  clippings: all
-  comments: ["<!--", "-->"]
-# 代码高亮风格，支持的 theme 列表见 https://github.com/mzlogin/rouge-themes
-highlight_theme: github
+encoding: utf-8
 
-# ---------------- #
-#      Author      #
-# ---------------- #
+# SEO相关信息
+title: Artio Blog
+description: Artio的个人博客
+keywords: Artio,Blog,Java 代码审计,网络安全,漏洞分析
 author: Artio
-organization: 
-organization_url: 
-github_username: Artio-Li
-location: Beijing, China
-email: itliwj@163.com
+footerText: 'Copyright © 2016 皖ICP备16016174号'
 
-# ---------------- #
-#    Navigation    #
-# ---------------- #
-navs:
-  -
-    href: /
-    label: 首页
-
-  -
-    href: /categories/
-    label: 分类
-
-#   -
-#     href: /archives/
-#     label: 归档
-
-#   -
-#     href: /open-source/
-#     label: 开源
-
-  -
-    href: /wiki/
-    label: 维基
-
-  -
-    href: /links/
-    label: 链接
-
-  -
-    href: /about/
-    label: 关于
-
-# ---------------- #
-#       RSS        #
-# ---------------- #
-subscribe_rss: /feed.xml
-
-# ---------------- #
-#      Jekyll      #
-# ---------------- #
-markdown: kramdown
+# 这些不要动
+permalink: /posts/:year/:month/:day/:title.html
 kramdown:
-    input: GFM
-highlighter: rouge
-paginate: 10
-lsi: false
-quiet: false
-excerpt_separator: "\n\n"
-permalink: /:year/:month/:day/:title/
-plugins:
-    - jekyll-github-metadata
-    - rouge
-#     - jekyll-html-pipeline
-    - jekyll-paginate
-    - jekyll-sitemap
-    - jekyll-feed
-    - jemoji
-#     - jekyll-mentions
-collections:
-    wiki:
-        output: true
-        permalink: /wiki/:path/
+  auto_ids: true
+  input: GFM
+  syntax_highlighter: rouge
+exclude: ['CNAME', 'README.md', 'LICENSE', '_site', 'dist', 'Gemfile', 'Gemfile.lock', 'blog.sh']
 
-# ---------------- #
-#      Comments    #
-# ---------------- #
-# support provider: disqus, gitment, gitalk, utterances
-comments_provider: gitalk
-# !!!重要!!! 请修改下面这些信息为你自己申请的
-# !!!Important!!! Please modify infos below to yours
-# https://disqus.com
-disqus:
-    username: 
-# https://imsun.net/posts/gitment-introduction/
-gitment:
-    owner: mzlogin
-    repo: blog-comments
-    oauth:
-        client_id: d2e1cbbd298958076462
-        client_secret: b42a4178e5fd4a7cf63189ef4b1453b05c375709
-# https://github.com/gitalk/gitalk#install
-gitalk:
-    owner: mzlogin
-    repo: blog-comments
-    clientID: d2e1cbbd298958076462
-    clientSecret: b42a4178e5fd4a7cf63189ef4b1453b05c375709
-# https://utteranc.es/
-utterances:
-    repo: mzlogin/blog-comments
-# 在使用其它评论组件时可点击显示 Disqus
-lazy_load_disqus : false
+# 域名配置
+# baseurl配置,如果网站部署在根目录下的其他目录中，请设置为 /目录名
+domainUrl: 'https://github.com/Artio-Li/Artio-Li.github.io'
+baseurl: ''
 
-# ---------------- #
-#      Search      #
-# ---------------- #
-simple_jekyll_search:
-    # 是否支持全文搜索
-    fulltext: false
-    # 最多显示多少条搜索结果
-    limit: 10
+# 吐个槽地址，会在chat页面中重定向到该地址
+tucaoUrl: https://support.qq.com/product/86335
 
-# ---------------- #
-#      Google      #
-# ---------------- #
-google:
-    analytics_id: UA-80669434-1
-    adsense:
-        footer: true
-        sidebar: true 
-        sidebar-detail: true 
-        content_header: false
-        content_footer: false
+# 菜单
+# 必填字段 title: '文本' url: '链接'
+# 可选字段 target: '_blank' 新页面打开 
+menu:
+  - title: 首页
+    url: /
+  - title: 归类
+    url: /pages/categories.html
+  - title: 搜索
+    url: /pages/search.html
+  - title: 友链
+    url: /pages/links.html
+  - title: 留言
+    url: /pages/chat.html
+  - title: 关于
+    url: /pages/about.html
+
+# 点击页面文字冒出特效,不需要请设置为false
+extClickEffect: true
+
+# Google Adsense,不需要请设置为false
+# _includes/ext-adsense.html 里面修改为自己的配置
+extAdsense: false
+
+# 数学公式支持，比较影响加载速度,不需要请设置为false
+extMath: false
+
+# 友情链接
+links:
+  - title: 文科中的技术宅
+    url: https://www.townwang.com
+  - title: Auuu Nya Blog
+    url: http://mu1er.cn
+  - title: 春风十里
+    url: https://www.geek-era.com
+  - title: 阿川的个人博客
+    url: https://achuan.io
+  - title: 魏文成博客
+    url: https://www.wwc.ren
+  - title: 06m
+    url: https://www.06m.me
+  - title: 达达知识
+    url: https://www.dadapush.com
+  - title: 祈雨的博客
+    url: https://wakzz.cn
+  - title: hongCYu’s Blog
+    url: https://hongcyu.cn
+  - title: Sorryfu
+    url: https://fushaolei.github.io
+  - title: 简单的人生笔记
+    url: https://yoyling.com
+  - title: oneNeko的博客
+    url: https://blog.oneneko.com
+  - title: Py's Whisper
+    url: https://whisper.pyliubaolin.top
+  - title: Yuyao's Blog
+    url: http://hellocode.ink
+  - title: 木叶的博客
+    url: https://muye.ml
+  - title: Stansec
+    url: https://standeblog.com
+  - title: Wenn的个人博客
+    url: https://wenn.tech
+  - title: Congbo's Blog
+    url: https://congbo.site
+
