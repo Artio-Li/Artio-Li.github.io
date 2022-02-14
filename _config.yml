@@ -5,7 +5,8 @@ title: Artio Blog
 description: Artio的个人博客
 keywords: Artio,Blog,Java 代码审计,网络安全,漏洞分析
 author: Artio
-footerText: '000000000000'
+# 这里可以编辑RSS订阅前边的文字
+footerText: ''
 
 # 这些不要动
 permalink: /posts/:year/:month/:day/:title.html
@@ -35,8 +36,8 @@ menu:
     url: /pages/search.html
   - title: 友链
     url: /pages/links.html
-  - title: 留言
-    url: /pages/chat.html
+#  - title: 留言
+#    url: /pages/chat.html
   - title: 关于
     url: /pages/about.html
 
