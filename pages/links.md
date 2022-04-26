@@ -9,6 +9,10 @@ title: 友情链接
 名称：{{ site.title }}
 描述：{{ site.description }}
 地址：{{ site.domainUrl }}{{ site.baseurl }}
+
+名称：Mox的笔记库
+链接：https://www.mocusez.site
+备注：探索未曾设想的道路
 ```
 
 <ul>
