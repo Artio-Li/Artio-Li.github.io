@@ -56,3 +56,6 @@ links:
   - title: 测试
     url: https://www.test.com
 
+permissions:
+  id-token: write
+  contents: read
